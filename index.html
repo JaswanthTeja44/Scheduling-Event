@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scheduler Event JHTK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="styles.css" rel="stylesheet">
+  
+</head>
+<body>
+  <div class="container">
+    <h1>🗓️ Smart Scheduler JHTK</h1>
+    <form id="eventForm">
+      <div>
+        <label for="title">Event Title</label>
+        <input type="text" id="title" name="title" required />
+        <div id="titleError" class="error"></div>
+      </div>
+
+      <div>
+        <label for="date">Date & Time</label>
+        <input type="datetime-local" id="date" name="date" required />
+        <div id="dateError" class="error"></div>
+      </div>
+
+      <div>
+        <label for="reminder">Set Reminder (minutes before)</label>
+        <input type="number" id="reminder" name="reminder" min="1" value="10" />
+      </div>
+
+      <div>
+        <label for="notes">Notes / Description</label>
+        <textarea id="notes" name="notes" rows="3"></textarea>
+      </div>
+
+      <button type="submit">Add Event</button>
+    </form>
+
+    <div class="calendar">
+      <h2>📅 Integrated Calendar</h2>
+      <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&showNav=1&showPrint=0&showTabs=1&mode=MONTH" frameborder="0"></iframe>
+    </div>
+
+    <div class="event-list" id="eventList">
+      <h2>📌 Scheduled Events</h2>
+    </div>
+  </div>
+
+  <script src="script.js">
+  </script>
+</body>
+</html>
